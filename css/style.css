@@ -1,0 +1,1144 @@
+.banking__nav {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .banking__nav {
+      align-items: flex-start; } }
+  @media only screen and (max-width: 21.88em) {
+    .banking__nav {
+      flex-direction: column;
+      align-items: center; } }
+  .banking__nav aside {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .banking__nav--back {
+    background-color: transparent;
+    border: none; }
+    .banking__nav--back a {
+      text-decoration: none;
+      color: #555;
+      font-size: 2.5rem; }
+  .banking__nav--welcome {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #555;
+    margin-left: 5rem; }
+    @media only screen and (max-width: 46.88em) {
+      .banking__nav--welcome {
+        font-size: 1.75rem; } }
+    @media only screen and (max-width: 23.75em) {
+      .banking__nav--welcome {
+        font-size: 1.25rem; } }
+
+.login__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .login__input {
+      flex-direction: column; } }
+  @media only screen and (max-width: 21.88em) {
+    .login__input {
+      flex-direction: row; } }
+  .login__input input {
+    padding: 1rem;
+    margin: 0.25rem;
+    font-size: 1.5rem;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 3rem; }
+    @media only screen and (max-width: 40.63em) {
+      .login__input input {
+        padding: 0.5rem;
+        font-size: 1rem; } }
+    .login__input input:focus {
+      outline: none;
+      box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25); }
+  .login__input--btn {
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #555;
+    padding: 0.25rem 1rem;
+    background-color: transparent;
+    border: none; }
+
+.app {
+  width: 95vw;
+  height: 95vh;
+  background-color: #215f5a;
+  border-radius: 2rem;
+  box-shadow: 0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: row; }
+  @media only screen and (max-width: 56.25em) {
+    .app {
+      flex-direction: column; } }
+  .app__navigation {
+    flex-basis: 18%;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media only screen and (max-width: 68.75em) {
+      .app__navigation {
+        padding: 1rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .app__navigation {
+        flex-direction: row; } }
+    @media only screen and (max-width: 46.88em) {
+      .app__navigation {
+        padding: 0.25rem;
+        flex-basis: 10%; } }
+    .app__navigation--title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: orange;
+      font-size: 2rem;
+      text-align: center; }
+      @media only screen and (max-width: 56.25em) {
+        .app__navigation--title {
+          margin-bottom: 0.5rem; } }
+      @media only screen and (max-width: 46.88em) {
+        .app__navigation--title {
+          display: none; } }
+    .app__navigation--list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      width: 95%; }
+      @media only screen and (max-width: 56.25em) {
+        .app__navigation--list {
+          flex-direction: row;
+          align-items: center;
+          justify-content: center; } }
+      @media only screen and (max-width: 46.88em) {
+        .app__navigation--list {
+          margin-left: 3rem; } }
+      @media only screen and (max-width: 34.38em) {
+        .app__navigation--list {
+          flex-direction: column;
+          align-items: flex-start; } }
+      .app__navigation--list li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        transition: all 0.25s; }
+        @media only screen and (max-width: 56.25em) {
+          .app__navigation--list li {
+            margin-bottom: 1.5rem; } }
+        @media only screen and (max-width: 46.88em) {
+          .app__navigation--list li {
+            padding: 0.5rem; } }
+        @media only screen and (max-width: 40.63em) {
+          .app__navigation--list li {
+            flex-direction: column; } }
+        @media only screen and (max-width: 34.38em) {
+          .app__navigation--list li {
+            padding: 0.25rem;
+            flex-direction: row; } }
+        .app__navigation--list li:not(:last-child) {
+          margin-bottom: 2rem; }
+        .app__navigation--list li:hover {
+          cursor: pointer;
+          background-color: #113a37; }
+        .app__navigation--list li img {
+          height: 2rem;
+          width: 2rem;
+          margin-right: 1.25rem;
+          color: currentColor; }
+          @media only screen and (max-width: 56.25em) {
+            .app__navigation--list li img {
+              height: 1.5rem;
+              width: 1.5rem; } }
+        .app__navigation--list li p {
+          font-size: 1.5rem;
+          color: #ddd;
+          text-transform: uppercase; }
+          @media only screen and (max-width: 34.38em) {
+            .app__navigation--list li p {
+              font-size: 1.25rem; } }
+    .app__navigation--timer {
+      position: absolute;
+      bottom: 3rem;
+      font-size: 1.75rem;
+      color: #fff; }
+      @media only screen and (max-width: 56.25em) {
+        .app__navigation--timer {
+          right: 1rem;
+          top: 1rem; } }
+      @media only screen and (max-width: 46.88em) {
+        .app__navigation--timer {
+          left: 1rem; } }
+      @media only screen and (max-width: 34.38em) {
+        .app__navigation--timer {
+          display: none; } }
+  .app-main {
+    flex: 1;
+    background-color: whitesmoke;
+    border-radius: 2rem; }
+    .app-main__header {
+      height: 12%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      @media only screen and (max-width: 25em) {
+        .app-main__header {
+          flex-direction: column;
+          margin-bottom: 3rem; } }
+      .app-main__header h1 {
+        margin-left: 3rem; }
+      .app-main__header span {
+        font-size: 1.5rem;
+        color: #555; }
+        @media only screen and (max-width: 25em) {
+          .app-main__header span {
+            margin-bottom: 1rem; } }
+      .app-main__header img {
+        height: 3rem;
+        width: 3rem;
+        margin-right: 3rem; }
+        @media only screen and (max-width: 56.25em) {
+          .app-main__header img {
+            height: 2.5rem;
+            width: 2.5rem; } }
+        @media only screen and (max-width: 25em) {
+          .app-main__header img {
+            margin-bottom: 2rem; } }
+        .app-main__header img:hover {
+          cursor: pointer;
+          transform: scale(1.1); }
+        .app-main__header img:active {
+          transform: scale(0.99); }
+    .app-main__body {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      height: 88%;
+      width: 100%; }
+      @media only screen and (max-width: 40.63em) {
+        .app-main__body {
+          flex-direction: column;
+          align-items: center;
+          min-height: 100%; } }
+      .app-main__body--left {
+        width: 90%;
+        height: 100%; }
+      .app-main__body--right {
+        position: relative;
+        width: 90%;
+        height: 100%; }
+      .app-main__body--history {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 90%;
+        height: 90%;
+        background-color: #fff;
+        border-radius: 2rem;
+        overflow: hidden;
+        overflow-y: scroll; }
+        @media only screen and (max-width: 40.63em) {
+          .app-main__body--history {
+            display: none; } }
+
+.movements {
+  padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .movements {
+      padding: 1.5rem; } }
+  .movements__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem; }
+  .movements__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .movements__name {
+    font-size: 1.5rem;
+    font-weight: 700; }
+  .movements__type {
+    color: #aaa; }
+  .movements__circle {
+    width: 4rem;
+    height: 4rem;
+    background-color: #76bda5;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    @media only screen and (max-width: 56.25em) {
+      .movements__circle {
+        width: 3rem;
+        height: 3rem; } }
+    .movements__circle--initials {
+      font-size: 1.25rem;
+      color: #fff; }
+  .movements__value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 10rem; }
+    .movements__value--withdrawal {
+      color: #ad3232; }
+    .movements__value--deposit {
+      color: #388838; }
+  .movements__date {
+    font-weight: 700;
+    color: #aaa; }
+  .movements img {
+    width: 4rem;
+    height: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .movements img {
+        width: 3rem;
+        height: 3rem; } }
+
+.my-cards {
+  height: 88%;
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .my-cards__header {
+    font-size: 1.75rem;
+    margin: 0 0 3rem 3rem; }
+  .my-cards__card {
+    position: relative;
+    width: 40rem;
+    height: 25rem;
+    background: linear-gradient(to top right, #67c2a4, #37b8c9);
+    border-radius: 1.5rem;
+    align-self: center;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (max-width: 68.75em) {
+      .my-cards__card {
+        width: 35rem;
+        height: 22rem; } }
+    @media only screen and (max-width: 59.38em) {
+      .my-cards__card {
+        width: 30rem;
+        height: 18.75rem; } }
+    @media only screen and (max-width: 18.75em) {
+      .my-cards__card {
+        width: 25rem;
+        height: 15.6rem; } }
+    .my-cards__card--top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem; }
+      @media only screen and (max-width: 59.38em) {
+        .my-cards__card--top {
+          padding: 0.5rem 1rem; } }
+      .my-cards__card--top p {
+        font-size: 1.5rem;
+        color: #ddd; }
+      .my-cards__card--top img {
+        width: 7rem;
+        height: 4rem; }
+        @media only screen and (max-width: 59.38em) {
+          .my-cards__card--top img {
+            width: 5rem;
+            height: 3rem; } }
+    .my-cards__card--center {
+      font-size: 3.5rem;
+      margin-left: 2rem;
+      color: #fff; }
+      @media only screen and (max-width: 59.38em) {
+        .my-cards__card--center {
+          font-size: 2.75rem; } }
+      @media only screen and (max-width: 18.75em) {
+        .my-cards__card--center {
+          font-size: 2rem; } }
+    .my-cards__card--bottom {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem; }
+      .my-cards__card--bottom p {
+        font-size: 1.5rem;
+        margin-right: 5rem;
+        color: #ddd; }
+        @media only screen and (max-width: 18.75em) {
+          .my-cards__card--bottom p {
+            display: none; } }
+      .my-cards__card--bottom span {
+        font-size: 1.5rem;
+        color: #ddd; }
+  .my-cards__info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem; }
+    @media only screen and (max-width: 34.38em) {
+      .my-cards__info {
+        padding: 0 1rem; } }
+    .my-cards__info--header {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem; }
+      @media only screen and (max-width: 56.25em) {
+        .my-cards__info--header {
+          margin-bottom: 0.25rem; } }
+    .my-cards__info--body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+    .my-cards__info--left {
+      font-size: 1.5rem;
+      color: #888;
+      font-weight: 700; }
+      .my-cards__info--left:not(:last-child) {
+        margin-bottom: 1rem; }
+        @media only screen and (max-width: 56.25em) {
+          .my-cards__info--left:not(:last-child) {
+            margin-bottom: 0.25rem; } }
+    .my-cards__info--right {
+      font-size: 1.5rem;
+      font-weight: 700; }
+      .my-cards__info--right:not(:last-child) {
+        margin-bottom: 1rem; }
+        @media only screen and (max-width: 56.25em) {
+          .my-cards__info--right:not(:last-child) {
+            margin-bottom: 0.25rem; } }
+    .my-cards__info--special {
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #215f5a; }
+
+.payments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 88%;
+  width: 100%; }
+  .payments__container {
+    width: 40rem;
+    height: 45rem;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, wheat, #666161);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    @media only screen and (max-width: 62.5em) {
+      .payments__container {
+        width: 35rem; } }
+    @media only screen and (max-width: 46.88em) {
+      .payments__container {
+        width: 30rem; } }
+    @media only screen and (max-width: 40.63em) {
+      .payments__container {
+        width: 35rem; } }
+    @media only screen and (max-width: 25em) {
+      .payments__container {
+        width: 30rem;
+        justify-content: flex-start; } }
+  .payments__header {
+    font-size: 2rem;
+    margin: 0 0 3rem 3rem; }
+    @media only screen and (max-width: 25em) {
+      .payments__header {
+        margin: 1rem 0; } }
+
+.form__payment {
+  width: 25rem; }
+  .form__payment label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ddd; }
+  .form__payment--cards {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 25em) {
+      .form__payment--cards {
+        margin-bottom: 0; } }
+    .form__payment--cards:focus {
+      outline: none; }
+  .form__payment--value {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; }
+  .form__payment--amount {
+    width: 90%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 25em) {
+      .form__payment--amount {
+        margin-bottom: 0.5rem; } }
+    .form__payment--amount:focus {
+      outline: none; }
+  .form__payment--form {
+    display: flex;
+    flex-direction: column; }
+  .form__payment--currency {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem; }
+    .form__payment--currency:focus {
+      outline: none; }
+  .form__payment--btn {
+    cursor: pointer;
+    background-color: #eb9d0d;
+    border: none;
+    border-radius: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.5rem; }
+    @media only screen and (max-width: 25em) {
+      .form__payment--btn {
+        margin-top: 0; } }
+    .form__payment--btn:active {
+      transform: scale(0.99); }
+
+.request-loan {
+  width: 100%;
+  height: 88%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .request-loan form {
+    position: relative;
+    width: 45rem;
+    height: 20rem;
+    background: linear-gradient(to right, #bac587, #88bbbe);
+    border-radius: 2rem;
+    padding: 4rem; }
+    @media only screen and (max-width: 71.88em) {
+      .request-loan form {
+        width: 40rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .request-loan form {
+        width: 35rem;
+        height: 17rem; } }
+    @media only screen and (max-width: 46.88em) {
+      .request-loan form {
+        width: 30rem;
+        height: 15rem; } }
+    @media only screen and (max-width: 40.63em) {
+      .request-loan form {
+        width: 35rem;
+        height: 17rem;
+        margin-top: 2rem; } }
+    @media only screen and (max-width: 46.88em) {
+      .request-loan form {
+        width: 30rem;
+        height: 15rem; } }
+    @media only screen and (max-width: 18.75em) {
+      .request-loan form {
+        width: 25rem;
+        height: 12rem;
+        padding: 1rem; } }
+    .request-loan form label {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 1rem; }
+    .request-loan form input {
+      width: 70%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      border: none; }
+      .request-loan form input:focus {
+        outline: none; }
+    .request-loan form button {
+      cursor: pointer;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      margin-left: 0.5rem;
+      color: #fff;
+      background-color: #eb9d0d; }
+      .request-loan form button:active {
+        transform: scale(0.98); }
+  .request-loan__approved {
+    width: 18rem;
+    height: 18rem;
+    position: absolute;
+    left: 8rem;
+    bottom: 3rem; }
+    .request-loan__approved img {
+      width: 100%;
+      height: 100%; }
+  .request-loan__rejected {
+    width: 26rem;
+    height: 18rem;
+    position: absolute;
+    left: 8rem;
+    bottom: 3rem; }
+    .request-loan__rejected img {
+      width: 100%;
+      height: 100%; }
+
+.saving-account {
+  width: 100%;
+  height: 88%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
+  .saving-account__header h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 700; }
+    @media only screen and (max-width: 25em) {
+      .saving-account__header h2 {
+        margin-top: 3rem;
+        margin-bottom: 0.25rem;
+        font-size: 1.5rem; } }
+  .saving-account__header p {
+    width: 100%;
+    height: 2px;
+    background-color: orange; }
+  .saving-account__amount {
+    font-size: 3rem;
+    color: orange;
+    font-weight: 700; }
+    @media only screen and (max-width: 25em) {
+      .saving-account__amount {
+        font-size: 2rem; } }
+  .saving-account__calculation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%; }
+    @media only screen and (max-width: 71.88em) {
+      .saving-account__calculation {
+        width: 80%; } }
+    @media only screen and (max-width: 43.75em) {
+      .saving-account__calculation {
+        width: 90%; } }
+    @media only screen and (max-width: 25em) {
+      .saving-account__calculation {
+        flex-direction: column; } }
+    .saving-account__calculation p {
+      font-size: 1.75rem;
+      margin-bottom: 1rem; }
+    .saving-account__calculation span {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-left: 1rem; }
+  .saving-account__profit {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .saving-account__profit div {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+    .saving-account__profit img {
+      height: 3rem;
+      width: 3rem; }
+    .saving-account__profit span {
+      color: orange; }
+      @media only screen and (max-width: 25em) {
+        .saving-account__profit span {
+          margin-bottom: 2rem; } }
+  .saving-account__rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .saving-account__rate div {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+    .saving-account__rate img {
+      height: 3rem;
+      width: 3rem; }
+  .saving-account__transfer {
+    width: 65%;
+    height: 10rem;
+    background: linear-gradient(to bottom right, #ecba5d, #6fd36f);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    @media only screen and (max-width: 78.13em) {
+      .saving-account__transfer {
+        flex-direction: column; } }
+    @media only screen and (max-width: 40.63em) {
+      .saving-account__transfer {
+        margin: 3rem 0;
+        padding: 2rem 0; } }
+    @media only screen and (max-width: 25em) {
+      .saving-account__transfer {
+        margin: 1.5rem 0; } }
+    .saving-account__transfer button {
+      cursor: pointer;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border-radius: 1rem;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      margin-left: 1rem;
+      transition: all 0.5s; }
+      @media only screen and (max-width: 78.13em) {
+        .saving-account__transfer button {
+          margin-top: 1rem; } }
+      .saving-account__transfer button:hover {
+        background-color: #436d43; }
+    .saving-account__transfer input {
+      font-size: 1.5rem;
+      color: #555;
+      padding: 0.25rem;
+      border: none;
+      border-radius: 0.5rem; }
+      .saving-account__transfer input:focus {
+        outline: none; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(10rem);
+  z-index: 5; }
+
+.hidden {
+  display: none; }
+
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.6; }
+
+.landing__container {
+  min-height: 100vh;
+  background-image: url(../img/background_image.jpg);
+  background-size: cover;
+  background-position: center; }
+
+.app__container {
+  min-height: 100vh;
+  background-image: url(../img/banking__image.jpeg);
+  background-size: cover;
+  background-position: center; }
+  @media only screen and (max-width: 21.88em) {
+    .app__container {
+      display: flex;
+      flex-direction: column; } }
+
+.exchange__container {
+  min-height: 100vh;
+  background-image: url(../img/abstract.jpg);
+  background-size: cover;
+  background-position: center; }
+
+.exchange__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #fff; }
+
+.exchange__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem; }
+  @media only screen and (max-width: 18.75em) {
+    .exchange__header {
+      padding: 0.5rem; } }
+  .exchange__header h1 {
+    font-size: 4rem;
+    text-transform: uppercase; }
+    @media only screen and (max-width: 28.13em) {
+      .exchange__header h1 {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 18.75em) {
+      .exchange__header h1 {
+        display: none; } }
+  .exchange__header option {
+    font-size: 4rem;
+    margin-left: 3rem; }
+    @media only screen and (max-width: 18.75em) {
+      .exchange__header option {
+        margin-left: 0; } }
+  .exchange__header--back {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin-right: 2rem; }
+    .exchange__header--back a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 3rem; }
+  .exchange__header--date {
+    color: #ddd;
+    margin-left: 3rem; }
+
+.exchange__main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 85vh; }
+  @media only screen and (max-width: 62.5em) {
+    .exchange__main {
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh; } }
+
+.exchange__rates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll; }
+  @media only screen and (max-width: 62.5em) {
+    .exchange__rates {
+      margin-bottom: 5rem; } }
+  .exchange__rates--countries {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 55rem; }
+    @media only screen and (max-width: 37.5em) {
+      .exchange__rates--countries {
+        width: 45rem; } }
+    @media only screen and (max-width: 28.13em) {
+      .exchange__rates--countries {
+        width: 35rem; } }
+    @media only screen and (max-width: 18.75em) {
+      .exchange__rates--countries {
+        width: 30rem; } }
+
+.country {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(117, 11, 11, 0.4);
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ddd; }
+  @media only screen and (max-width: 28.13em) {
+    .country {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; } }
+  .country:hover {
+    background-color: rgba(112, 71, 71, 0.4); }
+  .country__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .country__right {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    @media only screen and (max-width: 28.13em) {
+      .country__right {
+        justify-content: flex-end;
+        margin-right: 1.5rem; } }
+  .country__info {
+    display: flex;
+    flex-direction: column; }
+    .country__info--name {
+      font-size: 1.75rem; }
+      @media only screen and (max-width: 18.75em) {
+        .country__info--name {
+          font-size: 1.5rem; } }
+    .country__info--currency {
+      font-size: 1.5rem; }
+      @media only screen and (max-width: 18.75em) {
+        .country__info--currency {
+          font-size: 1.25rem; } }
+  .country__rate {
+    font-size: 2rem;
+    align-self: flex-end;
+    width: 30%; }
+    @media only screen and (max-width: 18.75em) {
+      .country__rate {
+        font-size: 1.5rem; } }
+  .country__mark {
+    align-self: flex-start;
+    width: 20%; }
+    @media only screen and (max-width: 28.13em) {
+      .country__mark {
+        display: none; } }
+  @media only screen and (max-width: 28.13em) {
+    .country__unit {
+      display: none; } }
+  .country img {
+    width: 8rem;
+    height: 5rem;
+    margin-right: 2rem; }
+    @media only screen and (max-width: 18.75em) {
+      .country img {
+        width: 6rem;
+        height: 4rem; } }
+
+.exchange__calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50rem; }
+
+.currency {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .currency__main {
+    cursor: pointer;
+    padding: 1rem;
+    margin-left: 3rem;
+    font-size: 2rem;
+    color: #eee;
+    background-color: transparent;
+    border: none; }
+    .currency__main:hover {
+      background-color: rgba(112, 71, 71, 0.4); }
+    .currency__main:focus {
+      outline: none; }
+  .currency input {
+    width: 50%;
+    height: 4rem;
+    font-size: 2rem;
+    text-align: end;
+    border: none;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem; }
+    @media only screen and (max-width: 18.75em) {
+      .currency input {
+        width: 40%; } }
+    .currency input:focus {
+      outline: none; }
+  .currency select {
+    height: 4rem;
+    font-size: 2rem;
+    border: none;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem; }
+    .currency select:focus {
+      outline: none; }
+
+.swap-rate {
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  margin: 2rem 0; }
+  .swap-rate img {
+    height: 100%;
+    width: 100%; }
+
+.calculator {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem; }
+  .calculator__reset {
+    cursor: pointer;
+    background-color: #8091c5;
+    grid-column: 2 / -1;
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .calculator__reset:active {
+      transform: scale(0.98); }
+  .calculator button {
+    cursor: pointer;
+    height: 5rem;
+    width: 8rem;
+    background-color: #9c7878;
+    border: none;
+    font-size: 2rem;
+    color: #ddd; }
+    .calculator button:active {
+      transform: scale(0.98); }
+
+.landing__container {
+  display: flex;
+  flex-direction: column; }
+
+.landing__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh; }
+  @media only screen and (max-width: 32.5em) {
+    .landing__main {
+      margin-top: 5rem; } }
+  .landing__main h1 {
+    font-size: 5rem;
+    color: #111;
+    letter-spacing: 0.5rem;
+    animation: leftMove 1s ease-out; }
+    @media only screen and (max-width: 50em) {
+      .landing__main h1 {
+        font-size: 4rem; } }
+    @media only screen and (max-width: 40.63em) {
+      .landing__main h1 {
+        font-size: 3rem; } }
+    @media only screen and (max-width: 32.5em) {
+      .landing__main h1 {
+        font-size: 2.5rem;
+        text-align: center; } }
+  .landing__main h2 {
+    font-size: 3.5rem;
+    color: #333;
+    animation: rightMove 1s ease-out; }
+    @media only screen and (max-width: 50em) {
+      .landing__main h2 {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 40.63em) {
+      .landing__main h2 {
+        font-size: 2rem; } }
+  .landing__main--description {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 5rem;
+    width: 50rem;
+    animation: bottomMove 1s ease-out; }
+    @media only screen and (max-width: 32.5em) {
+      .landing__main--description {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; } }
+    .landing__main--description img {
+      width: 3rem;
+      height: 3rem; }
+    .landing__main--description h3 {
+      margin-bottom: 1rem;
+      font-size: 2rem; }
+      @media only screen and (max-width: 40.63em) {
+        .landing__main--description h3 {
+          font-size: 1.5rem; } }
+    .landing__main--description p {
+      font-size: 1.5rem; }
+      @media only screen and (max-width: 40.63em) {
+        .landing__main--description p {
+          font-size: 1.25rem; } }
+  .landing__main--smart-banking {
+    width: 20rem; }
+    @media only screen and (max-width: 32.5em) {
+      .landing__main--smart-banking {
+        margin-bottom: 2rem; } }
+  .landing__main--exchange-rates {
+    width: 20rem; }
+
+.header {
+  height: 10vh;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end; }
+  @media only screen and (max-width: 50em) {
+    .header {
+      justify-content: center; } }
+  .header button {
+    cursor: pointer;
+    margin-right: 3rem;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: all 0.2s; }
+    @media only screen and (max-width: 40.63em) {
+      .header button {
+        font-size: 1.5rem; } }
+    .header button:hover {
+      background-color: #b3b3b3; }
+    .header button:active {
+      transform: scale(0.98); }
+    .header button a {
+      text-decoration: none;
+      color: #555; }
+
+@keyframes leftMove {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes rightMove {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes bottomMove {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  80% {
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }

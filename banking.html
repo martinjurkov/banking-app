@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/credit-card.png" />
+    <script defer src="banking.js"></script>
+    <title>Smart Banking</title>
+  </head>
+  <body class="app__container">
+    <nav class="banking__nav">
+      <aside>
+        <button class="banking__nav--back">
+          <a href="index.html">&larr;</a>
+        </button>
+        <p class="banking__nav--welcome">Log in to get started</p>
+      </aside>
+
+      <div class="banking__nav--login login">
+        <form class="login__input">
+          <input
+            type="text"
+            placeholder="user"
+            class="login__input--username"
+          />
+          <input type="password" placeholder="PIN" class="login__input--pin" />
+          <button class="login__input--btn">&rarr;</button>
+        </form>
+      </div>
+    </nav>
+
+    <main class="app hidden" id="app">
+      <nav class="app__navigation">
+        <div class="app__navigation--title">
+          <p>Smart Banking</p>
+        </div>
+        <ul class="app__navigation--list">
+          <li id="cards">
+            <img
+              src="img/credit-card-svgrepo-com-color.svg"
+              alt="Credit Card"
+            />
+            <p>My Cards</p>
+          </li>
+          <li id="payments">
+            <img src="img/wallet-svgrepo-com-color.svg" alt="Wallet" />
+            <p>Payments</p>
+          </li>
+          <li id="request-loan">
+            <img src="img/contract-svgrepo-com-color.svg" alt="Contract" />
+            <p>Request Loan</p>
+          </li>
+          <li id="saving-account">
+            <img src="img/savings-save-svgrepo-com-color.svg" alt="Savings" />
+            <p>Saving Account</p>
+          </li>
+        </ul>
+
+        <div class="app__navigation--timer" id="timer"></div>
+      </nav>
+
+      <div class="app-main">
+        <header class="app-main__header">
+          <h1 id="welcome"></h1>
+          <span id="today"></span>
+          <img src="img/logout.svg" alt="Logout" id="logout" />
+        </header>
+        <div class="app-main__body">
+          <div class="app-main__body--left">
+            <div class="my-cards" id="cards-list">
+              <h2 class="my-cards__header">Universal Card</h2>
+              <div class="my-cards__card">
+                <div class="my-cards__card--top">
+                  <p>Current Balance</p>
+                  <img src="img/mastercard.png" alt="Mastercard" />
+                </div>
+                <div class="my-cards__card--center" id="balance"></div>
+                <div class="my-cards__card--bottom">
+                  <p id="card-number"></p>
+                  <span id="card-date"></span>
+                </div>
+              </div>
+              <div class="my-cards__info">
+                <div class="my-cards__info--header">Card info</div>
+                <div class="my-cards__info--body">
+                  <div class="my-cards__info--column">
+                    <div class="my-cards__info--left">Card status</div>
+                    <div class="my-cards__info--left">Card number</div>
+                    <div class="my-cards__info--left">CVV</div>
+                  </div>
+                  <div class="my-cards__info--column">
+                    <div class="my-cards__info--right">Active</div>
+                    <div
+                      class="my-cards__info--right"
+                      id="card-number-right"
+                    ></div>
+                    <div
+                      class="my-cards__info--special"
+                      id="special-number"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="payments hidden" id="payments-list">
+              <div class="payments__container">
+                <h2 class="payments__header">Create Payment</h2>
+                <form class="form form__payment">
+                  <div>
+                    <label>From Card</label>
+                    <select class="form__payment--cards">
+                      <option value="1" id="payment-from"></option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>To Card</label>
+                    <input
+                      type="text"
+                      onkeypress="return formats(this, event)"
+                      onkeyup="return numberValidation(event)"
+                      placeholder="Card Number"
+                      class="form__payment--cards"
+                      id="payment-to"
+                    />
+                  </div>
+                  <div class="form__payment--value">
+                    <div class="form__payment--left">
+                      <label>Amount</label>
+                      <input
+                        type="number"
+                        class="form__payment--amount"
+                        id="payment-amount"
+                      />
+                    </div>
+                    <div class="form__payment--right">
+                      <label>Currency</label>
+                      <select class="form__payment--currency">
+                        <option value="1">CZK</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button class="form__payment--btn" id="payment-btn">
+                    Transfer
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div class="request-loan hidden" id="request-loan-list">
+              <form>
+                <label>Request Loan</label>
+                <input type="text" id="requested-loan" placeholder="Amount" />
+                <button id="btn-request-loan">Request &rarr;</button>
+              </form>
+              <div class="request-loan__approved hidden">
+                <img src="img/approved.png" alt="Approved" />
+              </div>
+              <div class="request-loan__rejected hidden">
+                <img src="img/rejected.png" alt="Rejected" />
+              </div>
+            </div>
+
+            <div class="saving-account hidden" id="saving-account-list">
+              <header class="saving-account__header">
+                <h2>Current Savings:</h2>
+                <div class="saving-account__amount" id="saving-amount"></div>
+                <p></p>
+              </header>
+              <form class="saving-account__transfer">
+                <input
+                  type="number"
+                  id="saving-transfer"
+                  placeholder="Amount"
+                />
+                <button id="btn-saving-account">Add To Savings &rarr;</button>
+              </form>
+              <div class="saving-account__calculation">
+                <div class="saving-account__profit">
+                  <p>Profit as of <strong>31.12.2022</strong></p>
+                  <div>
+                    <img src="img/profit.png" alt="Profit" />
+                    <span id="saving-profit"></span>
+                  </div>
+                </div>
+                <div class="saving-account__rate">
+                  <p>Rate</p>
+                  <div>
+                    <img src="img/rate.png" alt="Rate" />
+                    <span id="saving-rate"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-main__body--right">
+            <div class="app-main__body--history">
+              <ul class="movements" id="movements">
+                <!-- <li class="movements__row">
+                  <img src="img/cd.webp" alt="České dráhy" />
+                  <div class="movements__column">
+                    <div class="movements__name">České dráhy</div>
+                    <div class="movements__type movements__type--withdrawal">
+                      4 sent
+                    </div>
+                  </div>
+                  <div class="movements__column">
+                    <div class="movements__value movements__value--withdrawal">
+                      - 559 CZK
+                    </div>
+                    <div class="movements__date">3 days ago</div>
+                  </div>
+                </li>
+
+                <li class="movements__row">
+                  <img src="img/alza.webp" alt="Alza" />
+                  <div class="movements__column">
+                    <div class="movements__name">Alza</div>
+                    <div class="movements__type movements__type--withdrawal">
+                      3 sent
+                    </div>
+                  </div>
+                  <div class="movements__column">
+                    <div class="movements__value movements__value--withdrawal">
+                      - 1 899 CZK
+                    </div>
+                    <div class="movements__date">10/03/2022</div>
+                  </div>
+                </li>
+
+                <li class="movements__row">
+                  <img src="img/albert.webp" alt="Albert" />
+                  <div class="movements__column">
+                    <div class="movements__name">Albert</div>
+                    <div class="movements__type movements__type--withdrawal">
+                      2 sent
+                    </div>
+                  </div>
+                  <div class="movements__column">
+                    <div class="movements__value movements__value--withdrawal">
+                      - 897 CZK
+                    </div>
+                    <div class="movements__date">01/03/2022</div>
+                  </div>
+                </li>
+
+                <li class="movements__row">
+                  <div class="movements__circle" id="img-circle">
+                    <div class="movements__circle--initials">LM</div>
+                  </div>
+                  <div class="movements__column">
+                    <div class="movements__name">Lukáš Mantič</div>
+                    <div class="movements__type movements__type--deposit">
+                      1 receive
+                    </div>
+                  </div>
+                  <div class="movements__column">
+                    <div class="movements__value movements__value--deposit">
+                      + 2 500 CZK
+                    </div>
+                    <div class="movements__date">24/01/2022</div>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="overlay hidden" id="overlay"></div>
+  </body>
+</html>

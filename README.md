@@ -47,5 +47,5 @@ Users should be able to:
 
 
 ## Links
- - Solution URL: <a href=https://github.com/martinjurkov/invoice-app>GitHub</a>
- - Live Site URL: <a href=https://monumental-cendol-dff033.netlify.app/>Live</a>
+ - Solution URL: <a href=https://github.com/martinjurkov/banking-app>GitHub</a>
+ - Live Site URL: <a href=/>Live</a>

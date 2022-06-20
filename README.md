@@ -42,10 +42,6 @@ Users should be able to:
  -  user can send money to saving account, where he/she can receive interests at the end of the year
  -  transfer is shown in the transfer table
 
-## Things I Wish I Would Have Done
-
-
-
 ## Links
  - Solution URL: <a href=https://github.com/martinjurkov/banking-app>GitHub</a>
  - Live Site URL: <a href=https://elaborate-sundae-045980.netlify.app/index.html/>Live</a>
